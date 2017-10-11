@@ -3,9 +3,9 @@ import { FormGroup, Validator, AbstractControl, NG_VALIDATORS, FormGroupDirectiv
 
 @Directive({
     selector: 'form[round-trip]',
-    providers: [{ provide: NG_VALIDATORS, useExisting: RoundTrip, multi: true }]
+    providers: [{ provide: NG_VALIDATORS, useExisting: RoundTripDirective, multi: true }]
 })
-export class RoundTrip implements Validator {
+export class RoundTripDirective implements Validator {
 
     validate(control: AbstractControl): any {
 

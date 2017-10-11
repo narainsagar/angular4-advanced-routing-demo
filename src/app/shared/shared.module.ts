@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CityPipe } from './pipes/city.pipe';
 import { CityValidatorDirective } from './validation/city.validator';
-import { RoundTrip } from './validation/roundtrip.validator';
+import { RoundTripDirective } from './validation/roundtrip.validator';
 import { AsyncCityValidatorDirective } from './validation/async-city.validator';
 import { DateComponent } from './date/date.component';
 import { CustomPreloadingStrategy } from './preload/custom-preloading.strategy';
@@ -22,7 +22,7 @@ import { FlightResolver } from '../flight-booking/services/flight.resolver';
         CityPipe,
         CityValidatorDirective,
         AsyncCityValidatorDirective,
-        RoundTrip,
+        RoundTripDirective,
         DateComponent
     ],
     providers: [
@@ -37,7 +37,7 @@ import { FlightResolver } from '../flight-booking/services/flight.resolver';
         CityPipe,
         CityValidatorDirective,
         AsyncCityValidatorDirective,
-        RoundTrip,
+        RoundTripDirective,
         DateComponent
     ]
 })
