@@ -25,7 +25,7 @@ export class FlightEditComponent implements OnInit {
                         this.flight = flight;
                     },
                     (err) => {
-                        console.debug('Fehler beim Laden', err);
+                        console.debug('Error at loading', err);
                     }
                 );
 

@@ -4,6 +4,10 @@ import { BASE_URL } from '../../app.tokens';
 import { Observable, BehaviorSubject } from 'rxjs/Rx';
 import { Flight } from '../../entities/flight';
 
+// import data.
+import { flightData } from '../../../data/flight';
+import { flightsData } from '../../../data/flights';
+
 @Injectable()
 export class FlightService {
 
@@ -43,7 +47,7 @@ export class FlightService {
 
 
     findById(id: string): Observable<Flight> {
-
+        /*
         // let url = this.baseUrl + "/api/flight";
         const url = '/data/flight.json';
 
@@ -57,11 +61,15 @@ export class FlightService {
             .http
             .get(url, { headers, search })
             .map(resp => resp.json());
+        */
 
+        return new Observable(observer => {
+            observer.next(flightData);
+        });
     }
 
     find(from: string, to: string): void {
-
+        /*
         // let url = this.baseUrl + "/api/flight";
         const url = '/data/flights.json';
 
@@ -83,6 +91,9 @@ export class FlightService {
             },
             (err) => { console.warn(err); }
             );
+        */
+        const items = flightsData.filter(item => item.from === from && item.to === to);
+        this.flights$.next(items);
     }
 
 }
