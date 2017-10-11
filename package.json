@@ -12,6 +12,14 @@
     "e2e": "ng e2e"
   },
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narainsagar/angular4-advanced-routing-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/narainsagar/angular4-advanced-routing-demo/issues"
+  },
+  "homepage": "https://github.com/narainsagar/angular4-advanced-routing-demo#readme",
   "dependencies": {
     "@angular/animations": "4.4.4",
     "@angular/common": "4.4.4",
