@@ -93,6 +93,7 @@ export class FlightService {
             );
         */
         const items = flightsData.filter(item => item.from === from && item.to === to);
+        this.flights = items;
         this.flights$.next(items);
     }
 
